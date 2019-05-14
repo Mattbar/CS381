@@ -1,5 +1,4 @@
 module Password
-  # include Integer
   def self.generate(length = 8, restricted = "", replace = "")
     char_range = *(33..126)
     password = []
@@ -13,6 +12,5 @@ module Password
     end
     password.join("")
   end
-end
 
-puts Password.generate(10, "\\,.%$=?_()>{}/!", "ABC")
+end
