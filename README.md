@@ -19,7 +19,7 @@ To run the Ruby version of the password generator (assumming the user has Ruby i
 2. Execute the main.rb file:  
 ```$ ruby main.rb```
 
-#### Overview
+### Overview
 All three version of the program essentially accomplish the same thing; generating a random password of a certain length
 specified by the user when calling the function. The Elixir version accomplishes this by first creating a list that is in the range
 from 33 to 126 (both inclusive). This is due to this being the range of printable ascii characters. Elixir also has an
@@ -30,3 +30,8 @@ the list of all printable ascii codes and randomly selecting from it and putting
 The Ruby version of the program is basically taking the same approach except this version contains some added features. The user has
 the ability to pass in a string of characters that should be restricted from a valid password, along with a string of characters that
 will be randomly selected from to replace "illegal" characters should they be contained in the generated password.
+
+
+#### Learning Resources
+* [Official Elixir Guide](https://elixir-lang.org/getting-started/introduction.html)  
+* [Elixir 1.8 official documentation](https://hexdocs.pm/elixir/1.8.2/Kernel.html)
