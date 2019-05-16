@@ -44,3 +44,4 @@ The ML version follows simalar steps the the two other progarams with slight mod
 #### Learning Resources
 * [Official Elixir Guide](https://elixir-lang.org/getting-started/introduction.html)  
 * [Elixir 1.8 official documentation](https://hexdocs.pm/elixir/1.8.2/Kernel.html)
+* [The Standard ML Basis Library](sml-family.org)
