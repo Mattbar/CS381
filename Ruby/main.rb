@@ -14,3 +14,12 @@ module Password
   end
 
 end
+
+def test_generate()
+  uppers = *("A".."Z")
+  uppers = uppers.join("")
+  puts "Password of length 16 with all characters: #{Password.generate(16)}"
+  puts "Password of length 8 with no uppercase characters replacing with '!': #{Password.generate(8, uppers, "!")} "
+end
+
+test_generate()
