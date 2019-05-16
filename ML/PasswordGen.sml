@@ -1,13 +1,13 @@
 (* Create a seed that changes everytime the program is run. seed is based off of seconds from epoc reduced by 1.5 billion seconds so that ML can acctualy handle the large number *)
 fun seed () = 
     let
-        val r = Time.toReal(Time.now()) - 1.5e9
-        val f = Real.realFloor(r)
-        val d = r - f
-        val i = Real.floor(f)
-        val j = Real.floor(1000.0*d)
+        val secFromEpoc = Time.toReal(Time.now()) - 1.5e9
+        val floor = Real.realFloor(secFromEpoc)
+        val dif = secFromEpoc - floor
+        val minSeed = Real.floor(floor)
+        val maxSeed = Real.floor(1000.0*dif)
     in
-        Random.rand(i,j)
+        Random.rand(minSeed,maxSeed)
     end;
 
 (* Generate a list of size n, filled with random numbers that match up with possible printable ascii chars *)

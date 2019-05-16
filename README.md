@@ -19,6 +19,13 @@ To run the Ruby version of the password generator (assumming the user has Ruby i
 2. Execute the main.rb file:  
 ```$ ruby main.rb```
 
+### ML
+To run the ML version of the password generator:
+1. Navigate to to the ML directory:
+```$ cd ML/```
+2. Execute the PasswordGen.sml file:
+```$ sml PasswordGen.sml -e```
+
 ### Overview
 All three version of the program essentially accomplish the same thing; generating a random password of a certain length
 specified by the user when calling the function. The Elixir version accomplishes this by first creating a list that is in the range
@@ -30,6 +37,8 @@ the list of all printable ascii codes and randomly selecting from it and putting
 The Ruby version of the program is basically taking the same approach except this version contains some added features. The user has
 the ability to pass in a string of characters that should be restricted from a valid password, along with a string of characters that
 will be randomly selected from to replace "illegal" characters should they be contained in the generated password.
+
+The ML version follows simalar steps the the two other progarams with slight modifications. with the use of a helper function we create a list of random numbers between 33-126. in order to ensure the list of intigers is different for every time you run the program we have a seed function that creates a random seed value based from the seconds from epoc. since ML cannot handle that large of a value we must reduce it, we reduce it by 1.5 billion in this case. We then take our list of random intigers and convert them into chars. We then implode that list to create our password string.
 
 
 #### Learning Resources
